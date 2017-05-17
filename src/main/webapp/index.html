@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+$(function(){
+// 	document.domain = "http://192.168.16.132:8080";
+	var params = '{"head":{"mos":"iPhone","cd":"","ver":"1.0.0.1","de":"2015-10-08 10:19:56","screeny":1136,"screenx":640,"aid":"com.visionet.chezhu","phone":"","businessType":"","id":"1123"},"body":{"phone":"999999","type": "0","description":"wertyuio","cid":"1234","cityId":"107"}}';
+	var a = {};
+	a.name = "allen";
+	a.age = 25;
+	var p = JSON.stringify(a)
+	// 	$.get("http://192.168.16.132:8080/dzcx_cz/nm/sys/area/test",params);
+	var url = "http://192.168.16.132:8080/dzcx_cz/m/user/feedBack";
+	var data = JSON.stringify(a);
+	$.ajax({
+		type : 'POST',
+		url : url,
+// 		crossDomain : true,
+		data : params,
+		contentType : "application/json;charset=utf-8", 
+		dataType : 'json'
+	})
+// 	$.getJSON(url,data);
+})
+
+</script>
+</head>
+<body>
+<p>dfsafds</p>
+</body>
+</html>
